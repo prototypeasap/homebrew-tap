@@ -5,21 +5,21 @@
 class Cheapshot < Formula
   desc "CLI for LLM batch APIs. Chain multi-step workflows with Unix pipes."
   homepage "https://github.com/prototypeasap/cheapshot"
-  version "0.2.1"
+  version "0.2.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/prototypeasap/cheapshot/releases/download/v0.2.1/cheapshot_darwin_amd64.tar.gz"
-      sha256 "d06e5daaec9f551af94c9a02bd8aad7d7b78ffbe3061feb9d1b532378aacd2a7"
+      url "https://github.com/prototypeasap/cheapshot/releases/download/v0.2.2/cheapshot_darwin_amd64.tar.gz"
+      sha256 "ef219ee7c167ba1f1b0a4d27d55ffb8ed1dc241255da2c4d248bac426ec20ed0"
 
       define_method(:install) do
         bin.install "cheapshot"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/prototypeasap/cheapshot/releases/download/v0.2.1/cheapshot_darwin_arm64.tar.gz"
-      sha256 "32a2639b0d6f54449cada8958bb36bdee7cb0f2e1fd0a118c8ec2a4a07853ad9"
+      url "https://github.com/prototypeasap/cheapshot/releases/download/v0.2.2/cheapshot_darwin_arm64.tar.gz"
+      sha256 "43e9701dafc9c221d0a14e6c11cfab5be0bacd67099f2590ea33179009e295b7"
 
       define_method(:install) do
         bin.install "cheapshot"
@@ -29,15 +29,15 @@ class Cheapshot < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/prototypeasap/cheapshot/releases/download/v0.2.1/cheapshot_linux_amd64.tar.gz"
-      sha256 "5de6697455d4d003b6d7fa9fad959a3d240091df43ee902697ffb41ff5ba8615"
+      url "https://github.com/prototypeasap/cheapshot/releases/download/v0.2.2/cheapshot_linux_amd64.tar.gz"
+      sha256 "c84370f34291d8d0fb81ea3792b49e47359e32c88171005240bce34d2dac5628"
       define_method(:install) do
         bin.install "cheapshot"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/prototypeasap/cheapshot/releases/download/v0.2.1/cheapshot_linux_arm64.tar.gz"
-      sha256 "2c48f23c26c50997fa681f174234e3260fe41c2b41babe28a94818acad86c819"
+      url "https://github.com/prototypeasap/cheapshot/releases/download/v0.2.2/cheapshot_linux_arm64.tar.gz"
+      sha256 "10e12a5f9f76fbecc5cbe27b394fb68f692acff06ca7213eed6f27571971b797"
       define_method(:install) do
         bin.install "cheapshot"
       end
